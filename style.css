@@ -11,6 +11,10 @@ h3 {
     font-family: "Amarante", serif;
 }
 
+h1 {
+    padding-left: 2rem;
+}
+
 header {
     position: relative;
     width: 100%;
