@@ -60,7 +60,7 @@ nav.scrolled {
 
 .hero {
     width: 100%;
-    min-height: 100vh;
+    min-height: 70vh;
     background-image: url("photos/Jane_Leoniephotos.jpg");
     background-size: cover;
     background-position: right 20%;
@@ -75,7 +75,7 @@ nav.scrolled {
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-left: 2rem;
 }
 
@@ -83,16 +83,42 @@ main {
     padding: 20px;
 }
 
-#about {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 20px;
-}
-
 .about-content {
     display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-top {
+    display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    margin-top: 0;
+}
+
+#about p {
+    max-width: 500px;
+    line-height: 2;
+}
+
+.about-video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-video iframe {
+    width: 815px;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
 #about p {
@@ -143,12 +169,12 @@ textarea {
 }
 
 button {
-    padding: 10px;
+    padding: 12px 25px;
     border: none;
     background: black;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 #upcoming {
@@ -188,6 +214,28 @@ footer {
     font-size: smaller;
 }
 
+/* animations */
+
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left {
+    transform: translateX(-100px);
+}
+
+.reveal-right {
+    transform: translateX(100px);
+}
+
+.reveal-left.visible,
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* responsive design on smaller screens */
 @media (max-width: 768px) {
 
@@ -197,7 +245,7 @@ footer {
     }
 
     nav a {
-        font-size: 0.9rem;
+        font-size: 14px;
     }
 
     .about-content,
