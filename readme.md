@@ -26,6 +26,8 @@ This is my first website as a webdesigner for Jane Hackett, a violinist based in
 ### html and css
 structure and styling of the website. Including responsive design
 
+colour scheme: rgba(71, 64, 34) / rgb(87, 26, 29) / rgba(209, 187, 165)
+
 ### javascript
 
 

@@ -1,24 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Combo&display=swap');
-
 body {
-    background-color: rgb(237, 223, 206);
-    font-family: "Combo", sans-serif;
+    background-color: 242,240,239;
+    font-family: 'poppins', sans-serif;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Amarante", serif;
+    font-family: "Nanum Myeongjo", serif;
+    color:rgb(87, 26, 29);
 }
 
 h1 {
     padding-left: 2rem;
+    color:rgb(87, 26, 29);
+}
+
+p {
+    font-family: 'poppins', sans-serif;
+    color:rgb(87, 26, 29);
+
 }
 
 header {
     position: relative;
     width: 100%;
-    color: white;
+    color:rgb(87, 26, 29);
 }
 
 nav {
@@ -27,7 +33,6 @@ nav {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-
     display: flex;
     justify-content: center;
     gap: 35px;
@@ -41,7 +46,8 @@ nav {
 }
 
 nav a {
-    color: white;
+    color:rgb(87, 26, 29);
+    font-family: 'poppins', sans-serif;
     text-decoration: none;
     font-size: 1.2rem;
     letter-spacing: 1px;
@@ -60,23 +66,40 @@ nav.scrolled {
 
 .hero {
     width: 100%;
-    min-height: 70vh;
-    background-image: url("photos/Jane_Leoniephotos.jpg");
-    background-size: cover;
-    background-position: right 20%;
+    min-height: 80vh;
+    margin-top: 60px;
+    position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
-.hero-content h2 {
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("photos/Jane_Leoniephotos.jpg") ;
+    background-size: 110% auto;
+    background-position: 80% center;
+    filter: grayscale(90%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
-    margin-left: 2rem;
+    color:rgb(87, 26, 29);
 }
 
 .hero-content p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-left: 2rem;
+    color: rgb(87, 26, 29);
 }
 
 main {
@@ -153,26 +176,29 @@ main {
 }
 
 .form-area {
-    max-width: 500px;
+    max-width: 600px;
+    
 }
-
 
 form {
     display: flex;
     flex-direction: column;
+    color:rgb(87, 26, 29);
 }
 
 input,
 textarea {
     width: 100%;
     box-sizing: border-box;
+    margin: 2%;
 }
 
 button {
     padding: 12px 25px;
+    margin-top: 5%;
     border: none;
     background: black;
-    color: white;
+    color:rgb(87, 26, 29);
     cursor: pointer;
     border-radius: 20px;
 }
@@ -183,16 +209,27 @@ button {
     padding: 50px 40px;
 }
 
+.event-title {
+    display: grid;
+    font-weight: bold;
+    color:rgb(87, 26, 29);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 18px 0;
+}
+
 .event {
     display: grid;
-    grid-template-columns: 190px 1fr 250px;
+    color:rgb(87, 26, 29);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     align-items: center;
     padding: 18px 0;
 }
 
 .event:not(:last-child) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgb(87, 26, 29);
 }
 
 .date {
@@ -210,7 +247,7 @@ button {
 }
 
 footer {
-    color: white;
+    color:rgb(87, 26, 29);
     font-size: smaller;
 }
 
@@ -246,6 +283,10 @@ footer {
 
     nav a {
         font-size: 14px;
+    }
+
+    .hero::before {
+        background-position: 20% center;
     }
 
     .about-content,
